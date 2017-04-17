@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<script type="text/javascript" src="bower_components/angular/angular.js"></script>	
+		<!-- <script type="text/javascript" src="angular.js"></script>	 -->
+	</head>
+	<body ng-app="MyApp">
+	<!-- <body ng-app> -->
+
+		<div ng-controller="SettingsController1 as setting">
+			{{ setting.name }}
+			{{ setting.autre }}
+
+			<p ng-repeat="item in setting.items | orderBy: 'age'">
+				{{ item.name }} est {{ item.sexe }} et a {{ item.age }} ans
+			</p>
+			
+			<span></span>
+
+		</div>
+
+		
+
+<!-- 		<div ng-controller="myController">
+			{{ name }}
+		</div> -->
+
+		<input type="text" ng-model="monTest">
+		{{ monTest }}
+
+		<a href="#" toto>{{ autre }}</a>
+
+		<script type="text/javascript">
+			// var myController = function($scope){
+			// 	console.log('toto');
+			// 	$scope.name= 'toto';
+			// }
+
+			angular.module('MyApp', [])
+			  .controller('SettingsController1', SettingsController1);
+
+			function SettingsController1($rootScope) {
+			  var setting = this;
+			  $rootScope.autre = "vhvuv1";
+			  setting.name = 'John Smith';
+			  setting.autre = "vhvuv2";
+
+			  setting.items =[
+			  	{'name': 'toto', 'age':18, 'sexe': 'masculin'},
+			  	{'name': 'tito', 'age':8, 'sexe': 'feminin'},
+			  	{'name': 'un nom', 'age':48, 'sexe': 'masculin'}
+			  ]
+
+			}
+						
+		</script>
+
+	</body>
+</html>
