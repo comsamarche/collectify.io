@@ -4,17 +4,29 @@ app.config(
 	function($locationProvider,$routeProvider){
 		$locationProvider.hashPrefix(''); // version 1.6 de angular
 		$routeProvider
+			.when('/', {
+				controller: 'ItemIndexController as ItemI',
+				templateUrl: "views/item/index.html"
+			})
 			.when('/items/', {
-				controller: 'itemList as List',
+				controller: 'ItemListController as List',
 				templateUrl: "views/item/list.html"
 			})
+			.when('/items/new/', {
+				controller: 'ItemCreateController as i',
+				templateUrl: "views/item/create.html"
+			})			
+			.when('/items/edit/', {
+				controller: 'ItemEditController as i',
+				templateUrl: "views/item/create.html"
+			})
 			.when('/categories/', {
-				controller: 'categoryList as catList',
+				controller: 'CategoryListController as catList',
 				templateUrl: "views/category/list.html"
 			})
-			.when('/items/new/', {
-				controller: 'itemCreate as create',
-				templateUrl: "views/item/create.html"
+			.when('/categories/new/', {
+				controller: 'CategoryCreateController as catCreate',
+				templateUrl: "views/category/create.html"
 			})
 	}
 );

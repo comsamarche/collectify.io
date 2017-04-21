@@ -1,1 +1,3 @@
-'Item: "{{ item.name }}" dans la catégorie "{{ item.category_id }}"'
+<div class="card-panel col s12 hoverable">
+	<p>Item: "{{ item.name }}" dans la catégorie "{{ item.category_id }}" <a ng-click="List.editItem(item);">Edit </a> | <a ng-click="List.removeItem(item);">Supprimer X</a></p>
+</div>

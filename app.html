@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html>	
+<html lang="fr">	
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Css -->
+		<link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css">
+		<style>
+			select{
+				display: block;
+			}
+		</style>
+
+		<!-- Vendors -->
 		<script type="text/javascript" src="bower_components/angular/angular.js"></script>
 		<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+		
+		<!-- Underscore -->
+		<script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
+
+		<!-- Firebase -->
+		<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+		<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyBGtL5kNuzLmTxa4QiQaGQn0q6Y0Cpsevk",
+		    authDomain: "collectifytuto.firebaseapp.com",
+		    databaseURL: "https://collectifytuto.firebaseio.com",
+		    projectId: "collectifytuto",
+		    storageBucket: "collectifytuto.appspot.com",
+		    messagingSenderId: "827556609750"
+		  };
+		  firebase.initializeApp(config);
+		</script>			
+
 		<script type="text/javascript" src="app.js"></script>
 		<script type="text/javascript" src="routes/categoryRouting.js"></script>
+
+		<!-- Factory -->
+		<script type="text/javascript" src="src/factory/underscoreFactory.js"></script>
+		<script type="text/javascript" src="src/factory/firebaseAuthFactory.js"></script>
 
 		<!-- Controllers -->
 		<script type="text/javascript" src="src/controllers/categoryController.js"></script>
@@ -15,13 +50,16 @@
 		<!-- Directves -->
 		<script type="text/javascript" src="src/directives/itemDecoratorDirective.js"></script>
 		<script type="text/javascript" src="src/directives/categoryDecoratorDirective.js"></script>
+		<script type="text/javascript" src="src/directives/menuDecoratorDirective.js"></script>		
 
 		<!-- Services -->
 		<script type="text/javascript" src="src/services/itemProvider.js"></script>
-		<script type="text/javascript" src="src/services/categoryProvider.js"></script>	
+		<script type="text/javascript" src="src/services/categoryProvider.js"></script>
+		<script type="text/javascript" src="src/services/usersProvider.js"></script>	
 
 	</head>
 	<body ng-app="collectify">
-		<div class="view" ng-view></div>
+		<decorate-menu class="container"></decorate-menu>
+		<div class="view container" ng-view></div>
 	</body>
 </html>

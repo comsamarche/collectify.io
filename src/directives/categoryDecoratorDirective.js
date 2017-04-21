@@ -2,6 +2,7 @@
 
 app.directive('decorateCategory', function(){
 	return{
-		template: 'Category {{ key }} : "{{ category.name }}" son id est "{{ category.id }}"'
+		templateUrl: '/views/category/directive/decorator.html',
+		restrict: 'E'
 	}
 });

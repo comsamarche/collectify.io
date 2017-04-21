@@ -1,22 +1,22 @@
 'use strict';
 
 app
-	.controller('categoryIndex', function(){
+	.controller('CategoryIndexController', function(){
 		var catI = this;
 
 	})
-	.controller('categoryList', function(categoryProvider){
+	.controller('CategoryListController', function(categoryProvider){
 		var catList = this;
 		catList.categories = categoryProvider.getCategories();
-
+		catList.removeCat = function(category){
+			categoryProvider.remove(category); 
+		}
 	})
-	.controller('categoryCreate', function(){
+	.controller('CategoryCreateController', function(categoryProvider){
 		var catCreate = this;
-		catCreate.test = "toto";
-
-	})
-	.controller('categoryRemove', function(){
-		var catRemove = this;
-
+		catCreate.categories = categoryProvider.getCategories();
+		catCreate.createCategory = function(category){
+			categoryProvider.create(category);
+		}
 	})
 ;
