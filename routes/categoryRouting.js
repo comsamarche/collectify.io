@@ -9,7 +9,7 @@ app.config(
 				templateUrl: "views/index/index.html"
 			})
 			.when('/create-user', {
-				controller: 'CreateUserController as user',
+				controller: 'UserController as user',
 				templateUrl: "views/index/createUser.html"
 			})			
 			.when('/items/', {

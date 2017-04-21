@@ -1,3 +1,29 @@
+<div class="row">
+	<h4 class="header">Connectez-vous</h4>
+	<div class="card horizontal">
+	  <div class="card-image">
+	    <img src="http://lorempixel.com/100/190/nature/6">
+	  </div>
+	  <form class="card-stacked">
+	    <div class="card-content">
+				<p>
+					<label for="">Email:</label>
+					<input type="email" name="email" ng-model="Index.email">
+				</p>
+
+				<p>
+					<label for="">Password:</label>
+					<input type="password" name="password" ng-model="Index.password">
+				</p>	
+	    </div>
+	    <div class="card-action">
+	      <md-button class="btn cyan darken-2 right" ng-click="Index.auth(Index);">Se Connecter</md-button>
+	    </div>
+	  </form>
+	</div>
+</div>
+        
+
 <div ng-repeat="item in Index.items | limitTo : -3" class="row">
 	<decorate-item></decorate-item>
 </div>

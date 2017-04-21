@@ -1,9 +1,59 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">	
 	<head>
-		<script type="text/javascript" src="bower_components/angular/angular.js"></script>	
-		<!-- <script type="text/javascript" src="angular.js"></script>	 -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+		<!-- Css -->
+		<link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<!-- Vendors -->
+		<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+		<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+		
+		<!-- Underscore -->
+		<script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
+
+		<!--Materialize -->
+		<script src="bower_components/angular-aria/angular-aria.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.js"></script>
+		<script src="bower_components/angular-material/angular-material.js"></script>
+
+
+		<script>
+			var app = angular.module('collectify',['ngRoute', 'underscore']);
+		</script>			
+
+		<!-- <script type="text/javascript" src="app.js"></script> -->
+<!-- 		<script type="text/javascript" src="routes/categoryRouting.js"></script> -->
+
+		<!-- Factory -->
+		<script type="text/javascript" src="src/factory/underscoreFactory.js"></script>
+		<script type="text/javascript" src="src/factory/firebaseAuthFactory.js"></script>
+
+		<!-- Controllers -->
+<!-- 		<script type="text/javascript" src="src/controllers/indexController.js"></script>
+		<script type="text/javascript" src="src/controllers/userController.js"></script>
+		<script type="text/javascript" src="src/controllers/itemController.js"></script>		
+		<script type="text/javascript" src="src/controllers/categoryController.js"></script> -->
+
+
+		<!-- Directves -->
+<!-- 		<script type="text/javascript" src="src/directives/itemDecoratorDirective.js"></script>
+		<script type="text/javascript" src="src/directives/categoryDecoratorDirective.js"></script>
+		<script type="text/javascript" src="src/directives/menuDecoratorDirective.js"></script>		
+ -->
+		<!-- Services -->
+<!-- 		<script type="text/javascript" src="src/services/itemProvider.js"></script>
+		<script type="text/javascript" src="src/services/categoryProvider.js"></script>
+		<script type="text/javascript" src="src/services/usersProvider.js"></script>	 -->
+
 	</head>
-	<body ng-app="MyApp">
+	<body ng-app="collectify">
+
 	<!-- <body ng-app> -->
 
 		<div ng-controller="SettingsController1 as setting">
@@ -15,6 +65,8 @@
 			</p>
 			
 			<span></span>
+
+			<button href="#" ng-click="setting.test();">test Ng-click</button>
 
 		</div>
 
@@ -35,7 +87,7 @@
 			// 	$scope.name= 'toto';
 			// }
 
-			angular.module('MyApp', [])
+			angular.module('collectify')
 			  .controller('SettingsController1', SettingsController1);
 
 			function SettingsController1($rootScope) {
@@ -49,6 +101,10 @@
 			  	{'name': 'tito', 'age':8, 'sexe': 'feminin'},
 			  	{'name': 'un nom', 'age':48, 'sexe': 'masculin'}
 			  ]
+
+			  setting.test = function(){
+			  	console.log('test');
+			  }
 
 			}
 						
