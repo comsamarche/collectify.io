@@ -5,9 +5,13 @@ app.config(
 		$locationProvider.hashPrefix(''); // version 1.6 de angular
 		$routeProvider
 			.when('/', {
-				controller: 'ItemIndexController as ItemI',
-				templateUrl: "views/item/index.html"
+				controller: 'IndexController as Index',
+				templateUrl: "views/index/index.html"
 			})
+			.when('/create-user', {
+				controller: 'CreateUserController as user',
+				templateUrl: "views/index/createUser.html"
+			})			
 			.when('/items/', {
 				controller: 'ItemListController as List',
 				templateUrl: "views/item/list.html"

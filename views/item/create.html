@@ -6,10 +6,19 @@
 	</p>
 
 	<div class="input-field col s12">
-	    <select ng-model="i.item.category_id" name="categorie" ng-options="category.id as category.name for category in i.categories"></select>
-	    <label for="">Categorie:</label>
+
+	    <!--<select ng-model="i.item.category_id" name="categorie" ng-options="category.id as category.name for category in i.categories"></select>-->
+
+	    <md-input-container>
+          <label>categorie</label>
+          <md-select ng-model="i.item.category_id">
+            <md-option ng-repeat="category in i.categories" ng-value="category.id">
+              {{category.name}}
+            </md-option>
+          </md-select>
+        </md-input-container>
 	</div>
 
-	<p><button ng-click="i.save(i.item)">Sauvegarder</button></p>
+	<p><button class="btn cyan darken-2" ng-click="i.save(i.item)">Sauvegarder</button></p>
 
 </form>

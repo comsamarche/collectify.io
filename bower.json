@@ -1,0 +1,28 @@
+{
+  "name": "collectify.io",
+  "homepage": "https://github.com/comsamarche/collectify.io",
+  "authors": [
+    "Guinaudeau Christine <comsamarche@gmail.com>"
+  ],
+  "description": "Support of tutorial AngularJs for data handling by Video2brain - Julien Moulin",
+  "main": "app.html",
+  "keywords": [
+    "angularJS",
+    "tutorial"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.6.4",
+    "underscore": "^1.8.3",
+    "bower": "*",
+    "install": "^1.0.4",
+    "angular-material": "^1.1.4"
+  }
+}

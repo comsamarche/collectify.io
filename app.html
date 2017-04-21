@@ -3,10 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 
 		<!-- Css -->
-		<link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css">
+		<link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<style>
 			select{
 				display: block;
@@ -19,6 +21,12 @@
 		
 		<!-- Underscore -->
 		<script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
+
+		<!--Materialize -->
+		<script src="bower_components/angular-aria/angular-aria.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.js"></script>
+		<script src="bower_components/angular-material/angular-material.js"></script>
+
 
 		<!-- Firebase -->
 		<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
@@ -44,8 +52,11 @@
 		<script type="text/javascript" src="src/factory/firebaseAuthFactory.js"></script>
 
 		<!-- Controllers -->
+		<script type="text/javascript" src="src/controllers/indexController.js"></script>
+		<script type="text/javascript" src="src/controllers/userController.js"></script>
+		<script type="text/javascript" src="src/controllers/itemController.js"></script>		
 		<script type="text/javascript" src="src/controllers/categoryController.js"></script>
-		<script type="text/javascript" src="src/controllers/itemController.js"></script>
+
 
 		<!-- Directves -->
 		<script type="text/javascript" src="src/directives/itemDecoratorDirective.js"></script>
