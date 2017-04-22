@@ -18,7 +18,7 @@ app.service('userProvider', function($rootScope , $firebaseAuth, Auth){
 		Auth.$signInWithEmailAndPassword(user.email, user.password)
 		.then(function(authData) {
 		  console.log("Logged in as:", authData.uid);
-		  return authData;
+		  return Auth;
 		}).catch(function(error) {
 		  console.error("Authentication failed:", error);
 		  return user;
@@ -26,14 +26,20 @@ app.service('userProvider', function($rootScope , $firebaseAuth, Auth){
 	}
 
 	// Return authentification
-	this.getAuth = function(user){
-		var authData = Auth.$getAuth();
-		if (authData) {
-		  console.log("Is Logged as:", authData.email);	
-		  return authData;
-		} else {
-		  console.log("Logged out");
-		}
+	this.getAuth = function(){
+
+		return Auth.$getAuth();
+
+		// Auth.$onAuthStateChanged(function(authData) {
+		// 	if (authData) {
+		// 	  console.log("Is Logged as:", authData.email);	
+		// 	  return Auth;
+		// 	} else {
+		// 	  console.log("Logged out");
+		// 	}
+	 //    });
+		//var authData = Auth.$getAuth();
+
 	}
 
 	// // Logout

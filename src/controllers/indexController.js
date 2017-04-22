@@ -10,7 +10,13 @@ app
 	    });
 
 		Index.auth = function (user){
-			userProvider.authUser(user);
+			if(user !== undefined){
+				Index.session = userProvider.authUser(user);
+			}
+			else
+			{
+				console.log("pas d'utilisateur");
+			}
 		}
 
 		Index.logout = function (){

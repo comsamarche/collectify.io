@@ -6,31 +6,52 @@ app.config(
 		$routeProvider
 			.when('/', {
 				controller: 'IndexController as Index',
-				templateUrl: "views/index/index.html"
+				templateUrl: "views/index/index.html",
+				access: {
+					isFree: true
+				}
 			})
 			.when('/create-user', {
 				controller: 'UserController as user',
-				templateUrl: "views/index/createUser.html"
+				templateUrl: "views/index/createUser.html",
+				access: {
+					isFree: true
+				}
 			})			
-			.when('/items/', {
+			.when('/items', {
 				controller: 'ItemListController as List',
-				templateUrl: "views/item/list.html"
+				templateUrl: "views/item/list.html",
+				access: {
+					isFree: false
+				}
 			})
-			.when('/items/new/', {
+			.when('/items/new', {
 				controller: 'ItemCreateController as i',
-				templateUrl: "views/item/create.html"
+				templateUrl: "views/item/create.html",
+				access: {
+					isFree: false
+				}
 			})			
-			.when('/items/edit/', {
+			.when('/items/edit', {
 				controller: 'ItemEditController as i',
-				templateUrl: "views/item/create.html"
+				templateUrl: "views/item/create.html",
+				access: {
+					isFree: false
+				}
 			})
-			.when('/categories/', {
+			.when('/categories', {
 				controller: 'CategoryListController as catList',
-				templateUrl: "views/category/list.html"
+				templateUrl: "views/category/list.html",
+				access: {
+					isFree: false
+				}
 			})
-			.when('/categories/new/', {
+			.when('/categories/new', {
 				controller: 'CategoryCreateController as catCreate',
-				templateUrl: "views/category/create.html"
+				templateUrl: "views/category/create.html",
+				access: {
+					isFree: false
+				}
 			})
 	}
 );
