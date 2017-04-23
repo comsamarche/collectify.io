@@ -6,6 +6,8 @@
 		 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 
 		<!-- Css -->
+		
+		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
 		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -57,7 +59,9 @@
 		<script type="text/javascript" src="src/directives/itemDecoratorDirective.js"></script>
 		<script type="text/javascript" src="src/directives/categoryDecoratorDirective.js"></script>
 		<script type="text/javascript" src="src/directives/menuDecoratorDirective.js"></script>	
-		<script type="text/javascript" src="src/directives/checkUserDirective.js"></script>		
+		<script type="text/javascript" src="src/directives/checkUserDirective.js"></script>
+		<script type="text/javascript" src="src/directives/deferredCloakDirective.js"></script>
+			
 
 		<!-- Services -->
 		<script type="text/javascript" src="src/services/itemProvider.js"></script>
@@ -67,6 +71,6 @@
 	</head>
 	<body ng-app="collectify" check-user>
 		<decorate-menu class="container"></decorate-menu>
-		<div class="view container" ng-view></div>
+		<div class="view container" ng-view ng-cloak></div>
 	</body>
 </html>

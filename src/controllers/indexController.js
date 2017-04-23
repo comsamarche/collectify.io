@@ -4,6 +4,8 @@ app
 	.controller('IndexController', function($rootScope, userProvider , itemProvider, Auth){
 		var Index = this;
 
+		Index.firebaseUser = null;
+
 		Index.session = Auth;
 		Index.session.$onAuthStateChanged(function(firebaseUser) {
 	      Index.firebaseUser = firebaseUser;

@@ -1,0 +1,7 @@
+[deferred-cloak], [data-deferred-cloak], [x-deferred-cloak], .deferred-cloak
+ {
+    display: none;
+}
+.ng-hide.ng-hide-animate {
+	display: none !important;
+}
