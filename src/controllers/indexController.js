@@ -1,31 +1,39 @@
-'use strict';
+(function () {
+	'use strict';
 
-app
-	.controller('IndexController', function($rootScope, userProvider , itemProvider, Auth){
-		var Index = this;
+	angular.module('collectify')
+		.controller('IndexController', function($rootScope, userProvider , itemProvider, Auth){
+			var Index = this;
 
-		Index.firebaseUser = null;
+			// Test unitaire
+			Index.direBonjour = function(){
+				Index.salut = "Salut !";
+			};
 
-		Index.session = Auth;
-		Index.session.$onAuthStateChanged(function(firebaseUser) {
-	      Index.firebaseUser = firebaseUser;
-	    });
+			Index.firebaseUser = null;
 
-		Index.auth = function (user){
-			if(user !== undefined){
-				Index.session = userProvider.authUser(user);
-			}
-			else
-			{
-				console.log("pas d'utilisateur");
-			}
-		}
+			Index.session = Auth;
+			Index.session.$onAuthStateChanged(function(firebaseUser) {
+		      Index.firebaseUser = firebaseUser;
+		    });
 
-		Index.logout = function (){
-			userProvider.logout();
-		}		
+			Index.auth = function (user){
+				if(user !== undefined){
+					Index.session = userProvider.authUser(user);
+				}
+				else
+				{
+					console.log("pas d'utilisateur");
+				}
+			};
 
-		Index.items = itemProvider.getItems();
+			Index.logout = function (){
+				userProvider.logout();
+			};		
 
-	})
-;
+			Index.items = itemProvider.getItems();
+
+		})
+	;
+
+}());

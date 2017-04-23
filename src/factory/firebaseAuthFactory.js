@@ -1,4 +1,9 @@
-'use strict';
-app.factory('Auth', function($firebaseAuth) {
-  return $firebaseAuth(); // assumes firebaseAuth been load on the page
-});
+(function () {
+	'use strict';
+	
+	angular.module('collectify')
+	.factory('Auth', function($firebaseAuth) {
+	  return $firebaseAuth(); // assumes firebaseAuth been load on the page
+	});
+
+}());
