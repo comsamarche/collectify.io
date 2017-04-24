@@ -6,6 +6,12 @@
 		.controller('CategoryIndexController', function(){
 			var catI = this;
 
+			// Test unitaire
+			catI.salut = "Salut !";
+			catI.direBonjour = function(){
+				return "Salut !";
+			};
+
 		})
 		.controller('CategoryListController', function(categoryProvider){
 			var catList = this;

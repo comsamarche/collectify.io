@@ -1,0 +1,33 @@
+{
+  "name": "collectify.io",
+  "version": "1.0.0",
+  "description": "https://www.video2brain.com/fr/tuto/utiliser-la-session-pour-interagir-avec-linterface",
+  "main": "angular.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comsamarche/collectify.io.git"
+  },
+  "author": "Christine GUINAUDEAU",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/comsamarche/collectify.io/issues"
+  },
+  "homepage": "https://github.com/comsamarche/collectify.io#readme",
+  "keywords": [
+    "Angluar",
+    "Tutorial",
+    "Karma"
+  ],
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-karma": "^2.0.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.6.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-spec-reporter": "0.0.31"
+  }
+}

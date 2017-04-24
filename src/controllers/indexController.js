@@ -5,11 +5,6 @@
 		.controller('IndexController', function($rootScope, userProvider , itemProvider, Auth){
 			var Index = this;
 
-			// Test unitaire
-			Index.direBonjour = function(){
-				Index.salut = "Salut !";
-			};
-
 			Index.firebaseUser = null;
 
 			Index.session = Auth;
